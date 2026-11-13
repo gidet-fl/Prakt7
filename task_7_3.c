@@ -7,9 +7,13 @@ double diff_of_abs(double a, double b) {
 
 int main(void) {
     double x, y;
-    while (scanf("%lf %lf", &x, &y) == 2) {
+    printf("Введите две пары чисел:\n");
+
+    while (printf("Ввод (a b): ") && scanf("%lf %lf", &x, &y) == 2) {
         double result = diff_of_abs(x, y);
-        printf("%.4f\n", result);
+        printf("Результат разности модулей (|%.4f| - |%.4f|): %.4f\n\n", x, y, result);
     }
+
+    printf("Программа завершена.\n");
     return 0;
 }
